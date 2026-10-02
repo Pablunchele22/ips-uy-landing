@@ -466,16 +466,53 @@ body {
     margin-top: 8px;
 }
 
-.form-success {
-    color: var(--blue);
+/* ===== Form Status ===== */
+.form-status {
+    display: none;
+    padding: 14px 18px;
+    border-radius: 8px;
     font-weight: 500;
     font-size: 0.95rem;
-    display: none;
+}
+.form-status.success {
+    display: block;
+    background: var(--celeste);
+    color: var(--blue);
+    border: 1px solid var(--blue-light);
+}
+.form-status.error {
+    display: block;
+    background: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
 }
 
-.form-success.show {
-    display: block;
+/* ===== Submit Button ===== */
+.form-submit {
+    width: 100%;
+    background: var(--celeste);
+    color: var(--blue-dark);
+    padding: 14px;
+    border: 2px solid var(--blue-light);
+    border-radius: 50px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
+.form-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(26, 115, 232, 0.3);
+    background: var(--blue);
+    color: var(--white);
+}
+.form-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
 
 /* ===== Footer ===== */
 .footer {
